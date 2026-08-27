@@ -2,552 +2,620 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Expert Global</title>
 
-  <title>Resume Expert Global | Professional Resume Templates</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body {
+  background: #f5f7fb;
+  color: #1f2937;
+}
 
-    body {
-      background: #f5f7fb;
-      color: #222;
-      line-height: 1.6;
-    }
+nav {
+  background: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    /* NAVIGATION */
-    nav {
-      background: #ffffff;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #2563eb;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #2563eb;
-    }
+.logo span {
+  color: #111827;
+}
 
-    .logo span {
-      color: #111827;
-    }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-    }
+nav a:hover {
+  color: #2563eb;
+}
 
-    nav ul li a:hover {
-      color: #2563eb;
-    }
+.hero {
+  padding: 90px 8%;
+  text-align: center;
+  background: linear-gradient(135deg,#eff6ff,#ffffff);
+}
 
-    /* HERO */
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 70px 8%;
-      background: linear-gradient(135deg, #eff6ff, #ffffff);
-    }
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
 
-    .hero-text {
-      max-width: 600px;
-    }
+.hero h1 span {
+  color: #2563eb;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      color: #111827;
-    }
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 19px;
+  color: #64748b;
+  margin-bottom: 30px;
+}
 
-    .hero h1 span {
-      color: #2563eb;
-    }
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
 
-    .hero p {
-      font-size: 19px;
-      color: #555;
-      margin-bottom: 30px;
-    }
+.btn:hover {
+  background: #1d4ed8;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 25px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-right: 10px;
-    }
+section {
+  padding: 75px 8%;
+}
 
-    .btn:hover {
-      background: #1d4ed8;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
 
-    .btn-secondary {
-      background: #111827;
-    }
+.section-title h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
 
-    /* HERO CARD */
-    .hero-card {
-      background: white;
-      width: 380px;
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    }
+.section-title p {
+  color: #64748b;
+}
 
-    .resume-preview {
-      border: 1px solid #ddd;
-      padding: 25px;
-      height: 400px;
-      background: #fff;
-    }
+.templates {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
 
-    .resume-preview h3 {
-      color: #2563eb;
-      margin-bottom: 10px;
-    }
+.template-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+  transition: .3s;
+}
 
-    .line {
-      height: 8px;
-      background: #e5e7eb;
-      margin: 10px 0;
-      border-radius: 5px;
-    }
+.template-card:hover {
+  transform: translateY(-7px);
+}
 
-    .short {
-      width: 60%;
-    }
+.resume-preview {
+  height: 300px;
+  background: white;
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+}
 
-    /* SECTIONS */
-    section {
-      padding: 80px 8%;
-    }
+.resume-preview h3 {
+  color: #2563eb;
+  margin-bottom: 8px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+.resume-preview h4 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
 
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+.line {
+  height: 8px;
+  background: #e5e7eb;
+  margin: 7px 0;
+  border-radius: 5px;
+}
 
-    .section-title p {
-      color: #666;
-    }
+.short {
+  width: 60%;
+}
 
-    /* SERVICES */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
+.template-info {
+  padding: 25px;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-      text-align: center;
-    }
+.template-info h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
 
-    .card .icon {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
+.template-info p {
+  color: #64748b;
+  margin-bottom: 15px;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #111827;
-    }
+.price {
+  font-size: 28px;
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-    .card p {
-      color: #666;
-    }
+.buy-btn {
+  width: 100%;
+}
 
-    /* PRICING */
-    #pricing {
-      background: #eef4ff;
-    }
+.services {
+  background: #eef4ff;
+}
 
-    .price {
-      font-size: 35px;
-      font-weight: bold;
-      color: #2563eb;
-      margin: 15px 0;
-    }
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
 
-    .card ul {
-      list-style: none;
-      margin: 20px 0;
-      text-align: left;
-    }
+.service {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+}
 
-    .card ul li {
-      padding: 7px 0;
-    }
+.service-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
 
-    /* CONTACT */
-    .contact-box {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 35px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
+.service h3 {
+  margin-bottom: 10px;
+}
 
-    .contact-box input,
-    .contact-box textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 7px;
-      font-size: 16px;
-    }
+.contact {
+  max-width: 700px;
+  margin: auto;
+}
 
-    .contact-box textarea {
-      height: 150px;
-      resize: vertical;
-    }
+.contact form {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
 
-    /* FOOTER */
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 30px;
-    }
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 16px;
+}
 
-    footer p {
-      margin: 5px 0;
-    }
+textarea {
+  height: 140px;
+}
 
-    /* MOBILE */
-    @media (max-width: 800px) {
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
 
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
+footer p {
+  margin: 5px;
+}
 
-      nav ul {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+@media(max-width:800px) {
 
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-      }
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-      .hero h1 {
-        font-size: 38px;
-      }
+  nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-      .hero-card {
-        width: 100%;
-        max-width: 380px;
-      }
+  .hero h1 {
+    font-size: 38px;
+  }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  .templates,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="logo">
-      Resume<span>Expert Global</span>
-    </div>
+<nav>
 
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<div class="logo">
+Resume<span>Expert Global</span>
+</div>
 
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-  <!-- HOME -->
-  <section class="hero" id="home">
+</nav>
 
-    <div class="hero-text">
-      <h1>
-        Create a Resume That
-        <span>Gets Noticed.</span>
-      </h1>
+<section class="hero" id="home">
 
-      <p>
-        Professional resume templates designed to help you
-        stand out, impress employers, and move closer to your
-        dream career.
-      </p>
+<h1>
+Build a Resume That
+<span>Gets Noticed.</span>
+</h1>
 
-      <a href="#pricing" class="btn">View Templates</a>
-      <a href="#contact" class="btn btn-secondary">Contact Us</a>
-    </div>
+<p>
+Professional, modern, and editable resume templates
+designed to help you make a strong first impression.
+</p>
 
+<a href="#templates" class="btn">
+Browse Templates
+</a>
 
-    <div class="hero-card">
+</section>
 
-      <div class="resume-preview">
+<section id="templates">
 
-        <h3>YOUR NAME</h3>
+<div class="section-title">
 
-        <p>Professional Resume</p>
+<h2>Featured Resume Templates</h2>
 
-        <div class="line"></div>
-        <div class="line short"></div>
+<p>
+Choose a professional template and start building
+your career profile today.
+</p>
 
-        <br>
+</div>
 
-        <h4>Professional Summary</h4>
+<div class="templates">
 
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line short"></div>
+<div class="template-card">
 
-        <br>
+<div class="resume-preview">
 
-        <h4>Work Experience</h4>
+<h3>YOUR NAME</h3>
 
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line short"></div>
+<p>Professional Resume</p>
 
-        <br>
+<div class="line"></div>
+<div class="line short"></div>
 
-        <h4>Education</h4>
+<h4>Professional Summary</h4>
 
-        <div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
 
-      </div>
+<h4>Work Experience</h4>
 
-    </div>
+<div class="line"></div>
+<div class="line"></div>
 
-  </section>
+<h4>Education</h4>
 
+<div class="line"></div>
 
-  <!-- SERVICES -->
-  <section id="services">
+</div>
 
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <p>Everything you need to build a professional career profile.</p>
-    </div>
+<div class="template-info">
 
-    <div class="cards">
+<h3>Modern Professional</h3>
 
-      <div class="card">
-        <div class="icon">📄</div>
-        <h3>Resume Templates</h3>
-        <p>
-          Modern and professional resume templates
-          suitable for different careers and industries.
-        </p>
-      </div>
+<p>
+Clean and professional design suitable
+for corporate and office positions.
+</p>
 
-      <div class="card">
-        <div class="icon">✍️</div>
-        <h3>Cover Letters</h3>
-        <p>
-          Professional cover letter templates that
-          help you make a strong first impression.
-        </p>
-      </div>
+<div class="price">₱99</div>
 
-      <div class="card">
-        <div class="icon">💼</div>
-        <h3>Professional Resume</h3>
-        <p>
-          Create a polished resume designed to highlight
-          your skills, experience, and achievements.
-        </p>
-      </div>
+<button class="btn buy-btn"
+onclick="buyTemplate('Modern Professional')">
+Buy Now
+</button>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
+<div class="template-card">
 
-  <!-- PRICING -->
-  <section id="pricing">
+<div class="resume-preview">
 
-    <div class="section-title">
-      <h2>Our Packages</h2>
-      <p>Choose the package that fits your career needs.</p>
-    </div>
+<h3>YOUR NAME</h3>
 
-    <div class="cards">
+<p>Creative Resume</p>
 
-      <div class="card">
-        <h3>Basic Resume</h3>
+<div class="line"></div>
+<div class="line short"></div>
 
-        <div class="price">$5</div>
+<h4>About Me</h4>
 
-        <ul>
-          <li>✔ Professional Resume Template</li>
-          <li>✔ Editable Format</li>
-          <li>✔ Modern Design</li>
-          <li>✔ Easy to Customize</li>
-        </ul>
+<div class="line"></div>
+<div class="line"></div>
 
-        <a href="#contact" class="btn">Get Started</a>
-      </div>
+<h4>Skills</h4>
 
+<div class="line"></div>
+<div class="line"></div>
 
-      <div class="card">
-        <h3>Professional Package</h3>
+<h4>Experience</h4>
 
-        <div class="price">$10</div>
+<div class="line"></div>
 
-        <ul>
-          <li>✔ Premium Resume Template</li>
-          <li>✔ Cover Letter Template</li>
-          <li>✔ Editable Format</li>
-          <li>✔ Professional Design</li>
-        </ul>
+</div>
 
-        <a href="#contact" class="btn">Get Started</a>
-      </div>
+<div class="template-info">
 
+<h3>Creative Resume</h3>
 
-      <div class="card">
-        <h3>Premium Bundle</h3>
+<p>
+Stylish resume design for creative,
+marketing, education, and modern careers.
+</p>
 
-        <div class="price">$20</div>
+<div class="price">₱129</div>
 
-        <ul>
-          <li>✔ Multiple Resume Templates</li>
-          <li>✔ Cover Letter Templates</li>
-          <li>✔ Professional Designs</li>
-          <li>✔ Career-Ready Package</li>
-        </ul>
+<button class="btn buy-btn"
+onclick="buyTemplate('Creative Resume')">
+Buy Now
+</button>
 
-        <a href="#contact" class="btn">Get Started</a>
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+<div class="template-card">
 
+<div class="resume-preview">
 
-  <!-- CONTACT -->
-  <section id="contact">
+<h3>YOUR NAME</h3>
 
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Have questions? Send us a message.</p>
-    </div>
+<p>Executive Resume</p>
 
-    <div class="contact-box">
+<div class="line"></div>
+<div class="line short"></div>
 
-      <form onsubmit="sendMessage(event)">
+<h4>Career Profile</h4>
 
-        <input
-          type="text"
-          id="name"
-          placeholder="Your Name"
-          required
-        >
+<div class="line"></div>
 
-        <input
-          type="email"
-          id="email"
-          placeholder="Your Email"
-          required
-        >
+<h4>Professional Experience</h4>
 
-        <textarea
-          id="message"
-          placeholder="Write your message here..."
-          required
-        ></textarea>
+<div class="line"></div>
+<div class="line"></div>
 
-        <button type="submit" class="btn">
-          Send Message
-        </button>
+<h4>Education</h4>
 
-      </form>
+<div class="line"></div>
 
-    </div>
+</div>
 
-  </section>
+<div class="template-info">
 
+<h3>Executive Resume</h3>
 
-  <!-- FOOTER -->
-  <footer>
+<p>
+Elegant design for professionals,
+managers, supervisors, and executives.
+</p>
 
-    <p><strong>Resume Expert Global</strong></p>
+<div class="price">₱149</div>
 
-    <p>
-      Professional Resume Templates & Career Resources
-    </p>
+<button class="btn buy-btn"
+onclick="buyTemplate('Executive Resume')">
+Buy Now
+</button>
 
-    <p>
-      © 2026 Resume Expert Global. All Rights Reserved.
-    </p>
+</div>
 
-  </footer>
+</div>
 
+</div>
 
-  <!-- JAVASCRIPT -->
-  <script>
+</section>
 
-    function sendMessage(event) {
+<section class="services" id="services">
 
-      event.preventDefault();
+<div class="section-title">
 
-      const name =
-        document.getElementById("name").value;
+<h2>What We Offer</h2>
 
-      alert(
-        "Thank you, " +
-        name +
-        "! Your message has been received."
-      );
+<p>
+Professional tools to help you present yourself
+with confidence.
+</p>
 
-    }
+</div>
 
-  </script>
+<div class="service-grid">
+
+<div class="service">
+
+<div class="service-icon">📄</div>
+
+<h3>Resume Templates</h3>
+
+<p>
+Modern editable templates for different
+careers and industries.
+</p>
+
+</div>
+
+<div class="service">
+
+<div class="service-icon">✍️</div>
+
+<h3>Cover Letters</h3>
+
+<p>
+Professional cover letter templates
+to complement your resume.
+</p>
+
+</div>
+
+<div class="service">
+
+<div class="service-icon">💼</div>
+
+<h3>Career Resources</h3>
+
+<p>
+Helpful resources for job seekers
+and professionals.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="section-title">
+
+<h2>Contact Us</h2>
+
+<p>
+Have a question? Send us a message.
+</p>
+
+</div>
+
+<div class="contact">
+
+<form onsubmit="sendMessage(event)">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required
+>
+
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+required
+>
+
+<textarea
+id="message"
+placeholder="Your Message"
+required
+></textarea>
+
+<button class="btn" type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>Resume Expert Global</strong></p>
+
+<p>
+Professional Resume Templates & Career Resources
+</p>
+
+<p>
+© 2026 Resume Expert Global. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+function buyTemplate(templateName) {
+
+alert(
+"You selected: " +
+templateName +
+". Payment and download options will be available soon!"
+);
+
+}
+
+function sendMessage(event) {
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+alert(
+"Thank you, " +
+name +
+"! Your message has been received."
+);
+
+}
+
+</script>
 
 </body>
 </html>
