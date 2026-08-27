@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -205,6 +204,28 @@ section {
   font-size: 36px;
 }
 
+.order {
+  background: #eef4ff;
+}
+
+.order-box {
+  max-width: 700px;
+  margin: auto;
+}
+
+.order-box form {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.selected-plan {
+  background: #eff6ff;
+  border: 2px solid #2563eb;
+  font-weight: bold;
+}
+
 .services {
   background: #eef4ff;
 }
@@ -304,6 +325,7 @@ Resume<span>Expert Global</span>
 <li><a href="#home">Home</a></li>
 <li><a href="#templates">Templates</a></li>
 <li><a href="#pricing">Pricing</a></li>
+<li><a href="#order">Order</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -568,6 +590,60 @@ Choose Premium
 
 </section>
 
+<section class="order" id="order">
+
+<div class="section-title">
+
+<h2>Place Your Order</h2>
+
+<p>
+Complete the form below to request your selected resume package.
+</p>
+
+</div>
+
+<div class="order-box">
+
+<form onsubmit="submitOrder(event)">
+
+<input
+type="text"
+id="selectedPlan"
+class="selected-plan"
+placeholder="Selected Plan"
+readonly
+>
+
+<input
+type="text"
+id="orderName"
+placeholder="Your Full Name"
+required
+>
+
+<input
+type="email"
+id="orderEmail"
+placeholder="Your Email"
+required
+>
+
+<textarea
+id="orderDetails"
+placeholder="Tell us what you need for your resume..."
+required
+></textarea>
+
+<button class="btn" type="submit">
+Proceed to Order
+</button>
+
+</form>
+
+</div>
+
+</section>
+
 <section class="services" id="services">
 
 <div class="section-title">
@@ -700,12 +776,31 @@ templateName +
 
 function choosePlan(planName, price) {
 
+document.getElementById("selectedPlan").value =
+planName + " Plan - " + price;
+
+document.getElementById("order").scrollIntoView({
+behavior: "smooth"
+});
+
+}
+
+function submitOrder(event) {
+
+event.preventDefault();
+
+const name =
+document.getElementById("orderName").value;
+
+const plan =
+document.getElementById("selectedPlan").value;
+
 alert(
-"You selected the " +
-planName +
-" plan (" +
-price +
-"). Order and payment options will be available soon!"
+"Thank you, " +
+name +
+"! Your order for " +
+plan +
+" has been received. Payment instructions will be provided next."
 );
 
 }
@@ -729,4 +824,3 @@ name +
 
 </body>
 </html>
-```
