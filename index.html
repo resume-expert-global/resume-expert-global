@@ -189,6 +189,22 @@ section {
   width: 100%;
 }
 
+.pricing {
+  background: #f8fafc;
+}
+
+.pricing .template-card {
+  text-align: center;
+}
+
+.pricing .template-info {
+  padding: 35px 25px;
+}
+
+.pricing .price {
+  font-size: 36px;
+}
+
 .services {
   background: #eef4ff;
 }
@@ -287,6 +303,7 @@ Resume<span>Expert Global</span>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#templates">Templates</a></li>
+<li><a href="#pricing">Pricing</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -470,6 +487,87 @@ Buy Now
 
 </section>
 
+<section class="pricing" id="pricing">
+
+<div class="section-title">
+
+<h2>Choose Your Plan</h2>
+
+<p>
+Professional resume services designed for your career goals.
+</p>
+
+</div>
+
+<div class="templates">
+
+<div class="template-card">
+
+<div class="template-info">
+
+<h3>Basic</h3>
+
+<p>
+Professional resume service for a simple and effective career profile.
+</p>
+
+<div class="price">$5</div>
+
+<button class="btn buy-btn"
+onclick="choosePlan('Basic', '$5')">
+Choose Basic
+</button>
+
+</div>
+
+</div>
+
+<div class="template-card">
+
+<div class="template-info">
+
+<h3>Professional</h3>
+
+<p>
+Complete resume service designed to give you a polished and professional profile.
+</p>
+
+<div class="price">$10</div>
+
+<button class="btn buy-btn"
+onclick="choosePlan('Professional', '$10')">
+Choose Professional
+</button>
+
+</div>
+
+</div>
+
+<div class="template-card">
+
+<div class="template-info">
+
+<h3>Premium</h3>
+
+<p>
+Premium resume package for a stronger and more impressive career profile.
+</p>
+
+<div class="price">$20</div>
+
+<button class="btn buy-btn"
+onclick="choosePlan('Premium', '$20')">
+Choose Premium
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section class="services" id="services">
 
 <div class="section-title">
@@ -596,6 +694,18 @@ alert(
 "You selected: " +
 templateName +
 ". Payment and download options will be available soon!"
+);
+
+}
+
+function choosePlan(planName, price) {
+
+alert(
+"You selected the " +
+planName +
+" plan (" +
+price +
+"). Order and payment options will be available soon!"
 );
 
 }
