@@ -226,6 +226,31 @@ section {
   font-weight: bold;
 }
 
+.payment-box {
+  margin-top: 25px;
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+}
+
+.payment-box h3 {
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+.payment-method {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.payment-method strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
 .services {
   background: #eef4ff;
 }
@@ -640,6 +665,29 @@ Proceed to Order
 
 </form>
 
+<div class="payment-box">
+
+<h3>💳 Payment Options</h3>
+
+<div class="payment-method">
+<strong>GCash</strong>
+Send payment to: <strong>09087496036</strong>
+Account Name: <strong>Cr....l R.</strong>
+</div>
+
+<div class="payment-method">
+<strong>PayPal</strong>
+Send payment to:
+<strong>cvfreelance1996@gmail.com</strong>
+</div>
+
+<p>
+After making your payment, please keep your payment
+confirmation or screenshot for order verification.
+</p>
+
+</div>
+
 </div>
 
 </section>
@@ -766,11 +814,12 @@ Professional Resume Templates & Career Resources
 
 function buyTemplate(templateName) {
 
-alert(
-"You selected: " +
-templateName +
-". Payment and download options will be available soon!"
-);
+document.getElementById("selectedPlan").value =
+templateName;
+
+document.getElementById("order").scrollIntoView({
+behavior: "smooth"
+});
 
 }
 
@@ -800,7 +849,7 @@ alert(
 name +
 "! Your order for " +
 plan +
-" has been received. Payment instructions will be provided next."
+" has been received. Please complete payment using GCash or PayPal."
 );
 
 }
