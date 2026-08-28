@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,6 +271,25 @@ section{
   line-height:1.6;
 }
 
+.success-message{
+  display:none;
+  background:#f0fdf4;
+  border:2px solid #22c55e;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  margin-top:20px;
+}
+
+.success-message h2{
+  color:#16a34a;
+  margin-bottom:10px;
+}
+
+.success-message p{
+  margin-top:10px;
+}
+
 .services{
   background:#eef4ff;
 }
@@ -397,9 +417,6 @@ Browse Templates
 
 </section>
 
-
-<!-- RESUME TEMPLATES -->
-
 <section id="templates">
 
 <div class="section-title">
@@ -464,7 +481,6 @@ Buy Now
 
 </div>
 
-
 <div class="template-card">
 
 <div class="resume-preview">
@@ -512,7 +528,6 @@ Buy Now
 </div>
 
 </div>
-
 
 <div class="template-card">
 
@@ -565,9 +580,6 @@ Buy Now
 
 </section>
 
-
-<!-- SERVICE PRICING -->
-
 <section class="pricing" id="pricing">
 
 <div class="section-title">
@@ -607,7 +619,6 @@ Choose Basic
 
 </div>
 
-
 <div class="template-card">
 
 <div class="template-info">
@@ -632,7 +643,6 @@ Choose Professional
 </div>
 
 </div>
-
 
 <div class="template-card">
 
@@ -662,9 +672,6 @@ Choose Premium
 </div>
 
 </section>
-
-
-<!-- ORDER -->
 
 <section class="order" id="order">
 
@@ -759,6 +766,41 @@ Proceed to Order
 
 </form>
 
+<div
+id="orderSuccess"
+class="success-message"
+>
+
+<h2>
+✅ Order Submitted Successfully!
+</h2>
+
+<p>
+Thank you for choosing <strong>Resume Expert Global</strong>.
+</p>
+
+<p>
+We have received your order details and will review your request.
+</p>
+
+<p>
+<strong>Please keep your payment confirmation for verification.</strong>
+</p>
+
+<p>
+We will contact you through the email address you provided
+with the next steps for your resume.
+</p>
+
+<button
+class="btn"
+type="button"
+onclick="location.reload()"
+style="margin-top:20px;">
+Place Another Order
+</button>
+
+</div>
 
 <div class="payment-box">
 
@@ -803,9 +845,6 @@ for order verification.
 
 </section>
 
-
-<!-- SERVICES -->
-
 <section class="services" id="services">
 
 <div class="section-title">
@@ -834,7 +873,6 @@ careers and industries.
 
 </div>
 
-
 <div class="service">
 
 <div class="service-icon">✍️</div>
@@ -847,7 +885,6 @@ to complement your resume.
 </p>
 
 </div>
-
 
 <div class="service">
 
@@ -865,9 +902,6 @@ and professionals.
 </div>
 
 </section>
-
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -926,7 +960,6 @@ Send Message
 
 </section>
 
-
 <footer>
 
 <p>
@@ -943,7 +976,6 @@ Professional Resume Templates & Career Resources
 
 </footer>
 
-
 <script>
 
 function buyTemplate(templateName){
@@ -957,7 +989,6 @@ behavior:"smooth"
 
 }
 
-
 function choosePlan(planName,price){
 
 document.getElementById("selectedPlan").value =
@@ -969,7 +1000,49 @@ behavior:"smooth"
 
 }
 
+document.getElementById("orderForm").addEventListener("submit", async function(event){
+
+event.preventDefault();
+
+const form = event.target;
+const formData = new FormData(form);
+
+try{
+
+const response = await fetch(form.action,{
+method:"POST",
+body:formData,
+headers:{
+"Accept":"application/json"
+}
+});
+
+if(response.ok){
+
+form.style.display="none";
+
+document.getElementById("orderSuccess").style.display="block";
+
+document.getElementById("orderSuccess").scrollIntoView({
+behavior:"smooth"
+});
+
+}else{
+
+alert("There was a problem submitting your order. Please try again.");
+
+}
+
+}catch(error){
+
+alert("Unable to submit your order. Please check your internet connection.");
+
+}
+
+});
+
 </script>
 
 </body>
 </html>
+```
