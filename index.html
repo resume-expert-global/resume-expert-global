@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -629,19 +630,25 @@ Complete the form below to request your selected resume package.
 
 <div class="order-box">
 
-<form onsubmit="submitOrder(event)">
+<form
+action="https://formspree.io/f/xyeyygea"
+method="POST"
+>
 
 <input
 type="text"
 id="selectedPlan"
+name="Selected Plan"
 class="selected-plan"
 placeholder="Selected Plan"
 readonly
+required
 >
 
 <input
 type="text"
 id="orderName"
+name="Customer Name"
 placeholder="Your Full Name"
 required
 >
@@ -649,15 +656,23 @@ required
 <input
 type="email"
 id="orderEmail"
+name="Email"
 placeholder="Your Email"
 required
 >
 
 <textarea
 id="orderDetails"
+name="Order Details"
 placeholder="Tell us what you need for your resume..."
 required
 ></textarea>
+
+<input
+type="hidden"
+name="_subject"
+value="New Resume Expert Global Order"
+>
 
 <button class="btn" type="submit">
 Proceed to Order
@@ -764,11 +779,15 @@ Have a question? Send us a message.
 
 <div class="contact">
 
-<form onsubmit="sendMessage(event)">
+<form
+action="https://formspree.io/f/xyeyygea"
+method="POST"
+>
 
 <input
 type="text"
 id="name"
+name="Name"
 placeholder="Your Name"
 required
 >
@@ -776,15 +795,23 @@ required
 <input
 type="email"
 id="email"
+name="Email"
 placeholder="Your Email"
 required
 >
 
 <textarea
 id="message"
+name="Message"
 placeholder="Your Message"
 required
 ></textarea>
+
+<input
+type="hidden"
+name="_subject"
+value="New Message - Resume Expert Global"
+>
 
 <button class="btn" type="submit">
 Send Message
@@ -834,42 +861,8 @@ behavior: "smooth"
 
 }
 
-function submitOrder(event) {
-
-event.preventDefault();
-
-const name =
-document.getElementById("orderName").value;
-
-const plan =
-document.getElementById("selectedPlan").value;
-
-alert(
-"Thank you, " +
-name +
-"! Your order for " +
-plan +
-" has been received. Please complete payment using GCash or PayPal."
-);
-
-}
-
-function sendMessage(event) {
-
-event.preventDefault();
-
-const name =
-document.getElementById("name").value;
-
-alert(
-"Thank you, " +
-name +
-"! Your message has been received."
-);
-
-}
-
 </script>
 
 </body>
 </html>
+```
