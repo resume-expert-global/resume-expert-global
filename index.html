@@ -290,7 +290,7 @@ section {
   box-shadow: 0 8px 25px rgba(0,0,0,.08);
 }
 
-input, textarea {
+input, textarea, select {
   width: 100%;
   padding: 14px;
   margin-bottom: 15px;
@@ -668,6 +668,32 @@ placeholder="Tell us what you need for your resume..."
 required
 ></textarea>
 
+<select
+name="Payment Method"
+required
+>
+
+<option value="">
+Select Payment Method
+</option>
+
+<option value="GCash">
+GCash
+</option>
+
+<option value="PayPal">
+PayPal
+</option>
+
+</select>
+
+<input
+type="text"
+name="Transaction Reference"
+placeholder="Payment Transaction Reference Number"
+required
+>
+
 <input
 type="hidden"
 name="_subject"
@@ -691,9 +717,12 @@ Account Name: <strong>Cr....l R.</strong>
 </div>
 
 <div class="payment-method">
+
 <strong>PayPal</strong>
+
 Send payment to:
 <strong>cvfreelance1996@gmail.com</strong>
+
 </div>
 
 <p>
