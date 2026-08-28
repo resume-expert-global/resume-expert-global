@@ -6,357 +6,355 @@
 <title>Resume Expert Global</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  background: #f5f7fb;
-  color: #1f2937;
+body{
+  background:#f5f7fb;
+  color:#1f2937;
+  line-height:1.6;
 }
 
-nav {
-  background: white;
-  padding: 18px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+nav{
+  background:white;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.logo {
-  font-size: 23px;
-  font-weight: bold;
-  color: #2563eb;
+.logo{
+  font-size:23px;
+  font-weight:bold;
+  color:#2563eb;
 }
 
-.logo span {
-  color: #111827;
+.logo span{
+  color:#111827;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
 }
 
-nav a:hover {
-  color: #2563eb;
+nav a:hover{
+  color:#2563eb;
 }
 
-.hero {
-  padding: 90px 8%;
-  text-align: center;
-  background: linear-gradient(135deg,#eff6ff,#ffffff);
+.hero{
+  padding:90px 8%;
+  text-align:center;
+  background:linear-gradient(135deg,#eff6ff,#ffffff);
 }
 
-.hero h1 {
-  font-size: 52px;
-  margin-bottom: 20px;
+.hero h1{
+  font-size:52px;
+  margin-bottom:20px;
+  line-height:1.2;
 }
 
-.hero h1 span {
-  color: #2563eb;
+.hero h1 span{
+  color:#2563eb;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 19px;
-  color: #64748b;
-  margin-bottom: 30px;
+.hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:19px;
+  color:#64748b;
+  margin-bottom:30px;
 }
 
-.btn {
-  display: inline-block;
-  background: #2563eb;
-  color: white;
-  padding: 14px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
+.btn{
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  padding:14px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
 }
 
-.btn:hover {
-  background: #1d4ed8;
+.btn:hover{
+  background:#1d4ed8;
 }
 
-section {
-  padding: 75px 8%;
+section{
+  padding:75px 8%;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
 }
 
-.section-title h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.section-title h2{
+  font-size:36px;
+  margin-bottom:10px;
 }
 
-.section-title p {
-  color: #64748b;
+.section-title p{
+  color:#64748b;
 }
 
-.templates {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 30px;
+.templates{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
-.template-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,.08);
-  transition: .3s;
+.template-card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  transition:.3s;
 }
 
-.template-card:hover {
-  transform: translateY(-7px);
+.template-card:hover{
+  transform:translateY(-7px);
 }
 
-.resume-preview {
-  height: 300px;
-  background: white;
-  padding: 25px;
-  border-bottom: 1px solid #eee;
+.resume-preview{
+  height:300px;
+  background:white;
+  padding:25px;
+  border-bottom:1px solid #eee;
 }
 
-.resume-preview h3 {
-  color: #2563eb;
-  margin-bottom: 8px;
+.resume-preview h3{
+  color:#2563eb;
+  margin-bottom:8px;
 }
 
-.resume-preview h4 {
-  margin-top: 18px;
-  margin-bottom: 8px;
+.resume-preview h4{
+  margin-top:18px;
+  margin-bottom:8px;
 }
 
-.line {
-  height: 8px;
-  background: #e5e7eb;
-  margin: 7px 0;
-  border-radius: 5px;
+.line{
+  height:8px;
+  background:#e5e7eb;
+  margin:7px 0;
+  border-radius:5px;
 }
 
-.short {
-  width: 60%;
+.short{
+  width:60%;
 }
 
-.template-info {
-  padding: 25px;
+.template-info{
+  padding:25px;
 }
 
-.template-info h3 {
-  font-size: 21px;
-  margin-bottom: 8px;
+.template-info h3{
+  font-size:21px;
+  margin-bottom:8px;
 }
 
-.template-info p {
-  color: #64748b;
-  margin-bottom: 15px;
+.template-info p{
+  color:#64748b;
+  margin-bottom:15px;
 }
 
-.price {
-  font-size: 28px;
-  color: #2563eb;
-  font-weight: bold;
-  margin-bottom: 15px;
+.price{
+  font-size:28px;
+  color:#2563eb;
+  font-weight:bold;
+  margin-bottom:15px;
 }
 
-.buy-btn {
-  width: 100%;
+.buy-btn{
+  width:100%;
 }
 
-.pricing {
-  background: #f8fafc;
+.pricing{
+  background:#f8fafc;
 }
 
-.pricing .template-card {
-  text-align: center;
+.pricing .template-card{
+  text-align:center;
 }
 
-.pricing .template-info {
-  padding: 35px 25px;
+.pricing .template-info{
+  padding:35px 25px;
 }
 
-.pricing .price {
-  font-size: 36px;
+.pricing .price{
+  font-size:36px;
 }
 
-.order {
-  background: #eef4ff;
+.badge{
+  display:inline-block;
+  background:#dbeafe;
+  color:#1d4ed8;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:12px;
 }
 
-.order-box {
-  max-width: 700px;
-  margin: auto;
+.order{
+  background:#eef4ff;
 }
 
-.order-box form {
-  background: white;
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+.order-box{
+  max-width:700px;
+  margin:auto;
 }
 
-.selected-plan {
-  background: #eff6ff;
-  border: 2px solid #2563eb;
-  font-weight: bold;
+.order-box form{
+  background:white;
+  padding:35px;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-.payment-box {
-  margin-top: 25px;
-  background: #f8fafc;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #dbeafe;
+.selected-plan{
+  background:#eff6ff;
+  border:2px solid #2563eb;
+  font-weight:bold;
 }
 
-.payment-box h3 {
-  margin-bottom: 15px;
-  color: #2563eb;
+.payment-box{
+  margin-top:25px;
+  background:#f8fafc;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #dbeafe;
 }
 
-.payment-method {
-  background: white;
-  padding: 18px;
-  border-radius: 10px;
-  margin-bottom: 12px;
+.payment-box h3{
+  margin-bottom:15px;
+  color:#2563eb;
 }
 
-.payment-method strong {
-  display: block;
-  margin-bottom: 6px;
+.payment-method{
+  background:white;
+  padding:18px;
+  border-radius:10px;
+  margin-bottom:12px;
 }
 
-.payment-note {
-  margin-top: 15px;
-  color: #475569;
-  line-height: 1.6;
+.payment-method strong{
+  display:block;
+  margin-bottom:6px;
 }
 
-.success-message {
-  display: none;
-  background: #ecfdf5;
-  border: 2px solid #10b981;
-  color: #065f46;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 20px;
-  text-align: center;
+.payment-note{
+  margin-top:15px;
+  color:#475569;
+  line-height:1.6;
 }
 
-.success-message h3 {
-  margin-bottom: 10px;
-  font-size: 24px;
+.services{
+  background:#eef4ff;
 }
 
-.services {
-  background: #eef4ff;
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
+.service{
+  background:white;
+  padding:30px;
+  text-align:center;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
 }
 
-.service {
-  background: white;
-  padding: 30px;
-  text-align: center;
-  border-radius: 15px;
+.service-icon{
+  font-size:45px;
+  margin-bottom:15px;
 }
 
-.service-icon {
-  font-size: 45px;
-  margin-bottom: 15px;
+.service h3{
+  margin-bottom:10px;
 }
 
-.service h3 {
-  margin-bottom: 10px;
+.contact{
+  max-width:700px;
+  margin:auto;
 }
 
-.contact {
-  max-width: 700px;
-  margin: auto;
-}
-
-.contact form {
-  background: white;
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+.contact form{
+  background:white;
+  padding:35px;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 input,
 textarea,
-select {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 7px;
-  font-size: 16px;
+select{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:1px solid #ddd;
+  border-radius:7px;
+  font-size:16px;
 }
 
-textarea {
-  height: 140px;
+textarea{
+  height:140px;
 }
 
-footer {
-  background: #111827;
-  color: white;
-  text-align: center;
-  padding: 35px;
+footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:35px;
 }
 
-footer p {
-  margin: 5px;
+footer p{
+  margin:5px;
 }
 
-@media(max-width:800px) {
+@media(max-width:800px){
 
-  nav {
-    flex-direction: column;
-    gap: 15px;
+  nav{
+    flex-direction:column;
+    gap:15px;
   }
 
-  nav ul {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
+  nav ul{
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
   }
 
-  .hero h1 {
-    font-size: 38px;
+  .hero h1{
+    font-size:38px;
   }
 
   .templates,
-  .service-grid {
-    grid-template-columns: 1fr;
+  .service-grid{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -399,15 +397,17 @@ Browse Templates
 
 </section>
 
+
+<!-- RESUME TEMPLATES -->
+
 <section id="templates">
 
 <div class="section-title">
 
-<h2>Featured Resume Templates</h2>
+<h2>Resume Templates</h2>
 
 <p>
-Choose a professional template and start building
-your career profile today.
+Choose a professional editable template for your career.
 </p>
 
 </div>
@@ -443,6 +443,8 @@ your career profile today.
 
 <div class="template-info">
 
+<span class="badge">POPULAR</span>
+
 <h3>Modern Professional</h3>
 
 <p>
@@ -452,7 +454,8 @@ for corporate and office positions.
 
 <div class="price">₱99</div>
 
-<button class="btn buy-btn"
+<button
+class="btn buy-btn"
 onclick="buyTemplate('Modern Professional - ₱99')">
 Buy Now
 </button>
@@ -460,6 +463,7 @@ Buy Now
 </div>
 
 </div>
+
 
 <div class="template-card">
 
@@ -499,7 +503,8 @@ marketing, education, and modern careers.
 
 <div class="price">₱129</div>
 
-<button class="btn buy-btn"
+<button
+class="btn buy-btn"
 onclick="buyTemplate('Creative Resume - ₱129')">
 Buy Now
 </button>
@@ -507,6 +512,7 @@ Buy Now
 </div>
 
 </div>
+
 
 <div class="template-card">
 
@@ -545,7 +551,8 @@ managers, supervisors, and executives.
 
 <div class="price">₱149</div>
 
-<button class="btn buy-btn"
+<button
+class="btn buy-btn"
 onclick="buyTemplate('Executive Resume - ₱149')">
 Buy Now
 </button>
@@ -558,14 +565,17 @@ Buy Now
 
 </section>
 
+
+<!-- SERVICE PRICING -->
+
 <section class="pricing" id="pricing">
 
 <div class="section-title">
 
-<h2>Choose Your Plan</h2>
+<h2>Resume Service Packages</h2>
 
 <p>
-Professional resume services designed for your career goals.
+Choose the package that best fits your career needs.
 </p>
 
 </div>
@@ -576,15 +586,19 @@ Professional resume services designed for your career goals.
 
 <div class="template-info">
 
+<span class="badge">STARTER</span>
+
 <h3>Basic</h3>
 
 <p>
-Professional resume service for a simple and effective career profile.
+Professional resume service for a simple
+and effective career profile.
 </p>
 
 <div class="price">$5</div>
 
-<button class="btn buy-btn"
+<button
+class="btn buy-btn"
 onclick="choosePlan('Basic', '$5')">
 Choose Basic
 </button>
@@ -593,19 +607,24 @@ Choose Basic
 
 </div>
 
+
 <div class="template-card">
 
 <div class="template-info">
 
+<span class="badge">MOST POPULAR</span>
+
 <h3>Professional</h3>
 
 <p>
-Complete resume service designed to give you a polished and professional profile.
+Complete resume service designed to give you
+a polished and professional profile.
 </p>
 
 <div class="price">$10</div>
 
-<button class="btn buy-btn"
+<button
+class="btn buy-btn"
 onclick="choosePlan('Professional', '$10')">
 Choose Professional
 </button>
@@ -614,19 +633,24 @@ Choose Professional
 
 </div>
 
+
 <div class="template-card">
 
 <div class="template-info">
 
+<span class="badge">PREMIUM</span>
+
 <h3>Premium</h3>
 
 <p>
-Premium resume package for a stronger and more impressive career profile.
+Premium resume package for a stronger
+and more impressive career profile.
 </p>
 
 <div class="price">$20</div>
 
-<button class="btn buy-btn"
+<button
+class="btn buy-btn"
 onclick="choosePlan('Premium', '$20')">
 Choose Premium
 </button>
@@ -638,6 +662,9 @@ Choose Premium
 </div>
 
 </section>
+
+
+<!-- ORDER -->
 
 <section class="order" id="order">
 
@@ -724,28 +751,14 @@ name="_subject"
 value="New Resume Expert Global Order"
 >
 
-<button class="btn" type="submit">
+<button
+class="btn"
+type="submit">
 Proceed to Order
 </button>
 
 </form>
 
-<div class="success-message" id="orderSuccess">
-
-<h3>🎉 Thank You for Your Order!</h3>
-
-<p>
-Your order has been successfully submitted.
-We have received your information and will review
-your payment and order details.
-</p>
-
-<p style="margin-top:10px;">
-Please keep your payment confirmation for verification.
-We will contact you through the email you provided.
-</p>
-
-</div>
 
 <div class="payment-box">
 
@@ -773,11 +786,15 @@ Send payment to:
 </div>
 
 <p class="payment-note">
-<strong>Important:</strong> Please make your payment first,
-then select your payment method and enter your
-transaction reference number in the order form.
+
+<strong>Important:</strong>
+Please make your payment first,
+then select your payment method and enter
+your transaction reference number in the order form.
+
 Keep your payment confirmation or screenshot
 for order verification.
+
 </p>
 
 </div>
@@ -785,6 +802,9 @@ for order verification.
 </div>
 
 </section>
+
+
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
@@ -814,6 +834,7 @@ careers and industries.
 
 </div>
 
+
 <div class="service">
 
 <div class="service-icon">✍️</div>
@@ -826,6 +847,7 @@ to complement your resume.
 </p>
 
 </div>
+
 
 <div class="service">
 
@@ -843,6 +865,9 @@ and professionals.
 </div>
 
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -865,7 +890,6 @@ method="POST"
 
 <input
 type="text"
-id="name"
 name="Name"
 placeholder="Your Name"
 required
@@ -873,14 +897,12 @@ required
 
 <input
 type="email"
-id="email"
 name="Email"
 placeholder="Your Email"
 required
 >
 
 <textarea
-id="message"
 name="Message"
 placeholder="Your Message"
 required
@@ -892,7 +914,9 @@ name="_subject"
 value="New Message - Resume Expert Global"
 >
 
-<button class="btn" type="submit">
+<button
+class="btn"
+type="submit">
 Send Message
 </button>
 
@@ -902,9 +926,12 @@ Send Message
 
 </section>
 
+
 <footer>
 
-<p><strong>Resume Expert Global</strong></p>
+<p>
+<strong>Resume Expert Global</strong>
+</p>
 
 <p>
 Professional Resume Templates & Career Resources
@@ -916,26 +943,28 @@ Professional Resume Templates & Career Resources
 
 </footer>
 
+
 <script>
 
-function buyTemplate(templateName) {
+function buyTemplate(templateName){
 
 document.getElementById("selectedPlan").value =
 templateName;
 
 document.getElementById("order").scrollIntoView({
-behavior: "smooth"
+behavior:"smooth"
 });
 
 }
 
-function choosePlan(planName, price) {
+
+function choosePlan(planName,price){
 
 document.getElementById("selectedPlan").value =
 planName + " Plan - " + price;
 
 document.getElementById("order").scrollIntoView({
-behavior: "smooth"
+behavior:"smooth"
 });
 
 }
