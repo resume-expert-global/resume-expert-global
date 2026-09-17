@@ -435,10 +435,25 @@ footer p{
     grid-template-columns:1fr;
   }
 }
+
+/* AI RESUME ASSISTANT */
+.ai-chat-button{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;border:none;background:#2563eb;color:white;font-size:30px;cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,.22);z-index:2000}.ai-chat-button:hover{transform:scale(1.08);background:#1d4ed8}.ai-chat-box{display:none;position:fixed;right:22px;bottom:95px;width:360px;max-width:calc(100vw - 30px);height:520px;background:white;border-radius:18px;box-shadow:0 12px 35px rgba(0,0,0,.20);overflow:hidden;z-index:2000;border:1px solid #e5e7eb}.ai-chat-header{background:#2563eb;color:white;padding:18px;display:flex;justify-content:space-between;align-items:center}.ai-chat-header h3{margin:0;font-size:18px}.ai-chat-header button{background:none;border:none;color:white;font-size:24px;cursor:pointer}.ai-chat-messages{height:355px;overflow-y:auto;padding:18px;background:#f8fafc}.ai-message{max-width:88%;padding:11px 13px;border-radius:12px;margin-bottom:12px;font-size:14px;line-height:1.5}.ai-message.bot{background:white;border:1px solid #e5e7eb}.ai-message.user{background:#2563eb;color:white;margin-left:auto}.ai-options{padding:12px;background:white;border-top:1px solid #e5e7eb}.ai-option{display:block;width:100%;margin:7px 0;padding:10px 12px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;border-radius:9px;font-weight:bold;cursor:pointer;text-align:left;font-size:13px}.ai-option:hover{background:#dbeafe}@media(max-width:500px){.ai-chat-box{right:10px;bottom:85px;width:calc(100vw - 20px);height:500px}.ai-chat-messages{height:335px}.ai-chat-button{right:15px;bottom:15px}}
 </style>
 </head>
 
 <body>
+<!-- AI RESUME ASSISTANT -->
+<button class="ai-chat-button" id="aiChatButton" onclick="toggleAIChat()" aria-label="Open Resume Expert AI">🤖</button>
+<div class="ai-chat-box" id="aiChatBox">
+<div class="ai-chat-header"><h3>🤖 Resume Expert AI</h3><button onclick="toggleAIChat()" aria-label="Close chatbot">×</button></div>
+<div class="ai-chat-messages" id="aiChatMessages"><div class="ai-message bot">Hi! 👋 I'm <strong>Resume Expert AI</strong>.<br><br>I can help you with your resume, cover letter, job targeting, or choosing a package. What would you like help with?</div></div>
+<div class="ai-options" id="aiOptions">
+<button class="ai-option" onclick="aiChoice('Create a Resume')">📄 Create a Resume</button>
+<button class="ai-option" onclick="aiChoice('Improve My Resume')">✏️ Improve My Resume</button>
+<button class="ai-option" onclick="aiChoice('Tailor My Resume to a Job')">🎯 Tailor My Resume to a Job</button>
+<button class="ai-option" onclick="aiChoice('Create a Cover Letter')">📝 Create a Cover Letter</button>
+<button class="ai-option" onclick="aiChoice('Help Me Choose a Package')">💼 Help Me Choose a Package</button></div></div>
+
 
 <nav>
 
@@ -1419,6 +1434,13 @@ alert("Unable to submit your information. Please check your internet connection.
 
 });
 
+
+/* AI RESUME ASSISTANT */
+function toggleAIChat(){const b=document.getElementById("aiChatBox");b.style.display=b.style.display==="block"?"none":"block"}
+function addAIMessage(text,type){const m=document.getElementById("aiChatMessages"),d=document.createElement("div");d.className="ai-message "+type;d.innerHTML=text;m.appendChild(d);m.scrollTop=m.scrollHeight}
+function aiChoice(c){addAIMessage(c,"user");let r="";if(c==="Create a Resume")r="Absolutely! 📄 I can help you get started. We usually need your education, work experience, skills, certifications, target job, and other important details.<br><br>You can begin by choosing a package and completing our Client Information form.";if(c==="Improve My Resume")r="Sure! ✏️ If you already have a resume, upload it through our Client Information form. We can use it as the starting point for improving its content, organization, and presentation.";if(c==="Tailor My Resume to a Job")r="Great choice! 🎯 A job-targeted resume focuses on the position you want and highlights the experience and skills most relevant to that role. Include the target job and, if available, the job description.";if(c==="Create a Cover Letter")r="Of course! 📝 A cover letter can complement your resume and introduce your qualifications for a specific position. Include the target job and company details when you place your order.";if(c==="Help Me Choose a Package")r="Here's a quick guide:<br><br>💙 <strong>Basic — $5</strong><br>Professional resume service for a simple and effective career profile.<br><br>💙 <strong>Professional — $10</strong><br>A complete resume service for a polished professional profile.<br><br>💙 <strong>Premium — $20</strong><br>A premium resume package for a stronger career profile.";addAIMessage(r,"bot");document.getElementById("aiOptions").innerHTML='<button class="ai-option" onclick="goToOrder()">🛒 Go to Order Form</button><button class="ai-option" onclick="restartAI()">🔄 Start Over</button>'}
+function goToOrder(){document.getElementById("aiChatBox").style.display="none";document.getElementById("order").scrollIntoView({behavior:"smooth"})}
+function restartAI(){document.getElementById("aiChatMessages").innerHTML='<div class="ai-message bot">Welcome back! 👋 What would you like help with?</div>';document.getElementById("aiOptions").innerHTML='<button class="ai-option" onclick="aiChoice('Create a Resume')">📄 Create a Resume</button><button class="ai-option" onclick="aiChoice('Improve My Resume')">✏️ Improve My Resume</button><button class="ai-option" onclick="aiChoice('Tailor My Resume to a Job')">🎯 Tailor My Resume to a Job</button><button class="ai-option" onclick="aiChoice('Create a Cover Letter')">📝 Create a Cover Letter</button><button class="ai-option" onclick="aiChoice('Help Me Choose a Package')">💼 Help Me Choose a Package</button>'}
 </script>
 
 </body>
